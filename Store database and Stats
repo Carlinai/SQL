@@ -1,3 +1,5 @@
+--Create a store database
+
 CREATE TABLE Store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, aisle INTEGER);
 
 INSERT Into store Values (1, "women shirts", "womens", 9, 3);
