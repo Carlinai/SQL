@@ -1,0 +1,35 @@
+CREATE TABLE Store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, aisle INTEGER);
+
+INSERT Into store Values (1, "women shirts", "womens", 9, 3);
+INSERT Into store Values (2, "kids jeans", "kids", 24, 7);
+INSERT Into store Values (3, "bras", "womens", 19, 3);
+INSERT Into store Values (4, "shoes", "footwear", 55, 11);
+INSERT Into store Values (5, "undies", "undergarments", 27, 7);
+INSERT Into store Values (6, "socks", "footwear", 12, 7);
+INSERT Into store Values (7, "earrings", "jewelry", 29, 4);
+Insert Into store Values (8, "rings", "jewelry", 24, 4);
+Insert Into store Values (9, "boxers", "mens", 18, 5);
+Insert Into store Values (10, "dresses", "womens", 89, 9);
+Insert Into store Values (11, "skirts", "womens", 70, 9);
+Insert Into store Values (12, "dishes", "kitchen", 56, 8);
+Insert Into store Values (13, "silverware", "kitchen", 108, 8);
+Insert Into store Values (14, "sheet", "bedding", 160, 10);
+Insert Into store Values (15, "pillows", "bedding", 45, 2);
+Insert Into store Values (16, "shower curtains", "bathroom", 23, 2);
+Insert Into store Values (17, "cat food", "pets",  17, 2);
+Insert Into store Values (18, "dog food", "pets", 17, 2);
+
+--display the database ordered by price. 
+Select * from store
+Order by Price; 
+
+--display the database ordered by aisle. 
+Select * from store
+Order by aisle;
+
+--display the database group by section. 
+Select * from store
+group by section;
+
+--what is the sum price of items in the store? 
+Select Sum (price) from store;
