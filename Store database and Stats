@@ -18,7 +18,7 @@ Insert Into store Values (13, "silverware", "kitchen", 108, 8);
 Insert Into store Values (14, "sheet", "bedding", 160, 10);
 Insert Into store Values (15, "pillows", "bedding", 45, 2);
 Insert Into store Values (16, "shower curtains", "bathroom", 23, 2);
-Insert Into store Values (17, "cat food", "pets",  17, 2);
+Insert Into store Values (17, "cat food", "pets", 17, 2);
 Insert Into store Values (18, "dog food", "pets", 17, 2);
 
 --display the database ordered by price. 
