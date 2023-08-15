@@ -1,0 +1,72 @@
+/* Create table about the people and what they do here */
+CREATE TABLE artists (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    stage_name TEXT,
+    real_name TEXT); 
+
+INSERT INTO artists (stage_name, real_name) VALUES ("Beyonce", "Beyoncé Knowles-Carter");
+INSERT INTO artists (stage_name, real_name) VALUES ("Lady Gaga", "Stefani Joanne Angelina Germanotta");
+INSERT INTO artists (stage_name, real_name) VALUES ("Cardi B", "Belcalis Marlenis Almánzar Cephus");
+INSERT INTO artists (stage_name, real_name) VALUES ("Sia", "Sia Kate Isobelle Furler");
+INSERT INTO artists (stage_name, real_name) VALUES ("Aaliyah", "Aaliyah Dana Haughton");
+INSERT INTO artists (stage_name, real_name) VALUES ("Eminem", "Marshall Bruce Mathers III");
+INSERT INTO artists (stage_name, real_name) VALUES ("HAIM", "Este Haim, Danielle Haim, Alana Haim");
+INSERT INTO artists (stage_name, real_name) VALUES ("The Weeknd", "Abel Makkonen Tesfaye");
+INSERT INTO artists (stage_name, real_name) VALUES ("Doja Cat", "Amala Ratna Zandile Dlamini");
+INSERT INTO artists (stage_name, real_name) VALUES ("2Pac", "Tupac Shakur");
+INSERT INTO artists (stage_name, real_name) VALUES ("Queen", "Freddie Mercury, Brian May, Roger Taylor, John Deacon");
+INSERT INTO artists (stage_name, real_name) VALUES ("Rihanna", "Robyn Rihanna Fenty");
+INSERT INTO artists (stage_name, real_name) VALUES ("Lana Del Rey", "Elizabeth Woolridge Grant");
+INSERT INTO artists (stage_name, real_name) VALUES ("Little Mix", "Leigh-Anne Pinnock, Jade Thirlwall, Perrie Edwards");
+INSERT INTO artists (stage_name, real_name) VALUES ("G-Eazy", "Gerald Earl Gillum");
+
+Create table Singers(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    song TEXT,
+    release_year Text,
+    genre INTEGER);
+
+
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Britney Spears","Stronger","2000","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Beyonce","Bigger","2019","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Lady Gaga","PokerFace","2008","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Celine Dion","A New Day Has Come","2002","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Michael Jackson","Human Nature","1982","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("2Pac","California Love","1995","Hip-Hop/Rap");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Bruno Mars","Talking to the Moon","2010","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Cardi B","Ring","2018","Hip-Hop/Rap");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Queen","Radio Ga Ga","1984","Rock");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Shaina Twain","Nah!","2002","Country");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Sia","Unstoppable","2016","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Aaliyah","More Than A Woman","2001","R&B/Soul");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Eminem","Mockingbird","2004","Hip-Hop/Rap");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("G-Eazy","I Mean It","2014","Hip-Hop/Rap");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Bebe & Cece Winans","Can't Take This Away","1991","Gospel");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Charlie Puth","We Don't Talk Anymore","2016","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Little Mix","Salute","2013","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Rihanna","Lift Me Up","2022","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("HAIM","Walking Away","2017","Alternative");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Nikki Yanofsky","Bienvenue Dans Ma Vie","2010","Jazz");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Melanie Martinez","Show and Tell","2019","Alternative");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Lana Del Rey","Dark Paradise","2012","Alternative");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Billie Ellish","My Future","2020","Alternative");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Doja Cat","Vegas","2022","R&B/Soul");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("The Weeknd","As You Are","2015","R&B/Soul");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Michael Bublé","Georgia on my Mind","2009","Pop");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Yolanda Adams","That Name","1999","Gospel");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Tony Braxton","Unbreak My Heart","1996","R&B/Soul");
+INSERT INTO Singers (name,song,release_year,genre) VALUES ("Taylor Swift","Bad Blood","2014","Pop");
+
+SELECT *
+FROM singers
+order by release_year desc;
+
+SELECT artists.id,artists.stage_name,artists.real_name,singers.id,singers.song,singers.	release_year,singers.genre FROM artists
+    JOIN singers
+    ON artists.stage_name = singers.name;
+    
+SELECT artists.id,artists.stage_name,artists.real_name,singers.song,singers.release_year,singers.genre FROM artists
+    JOIN singers
+    ON artists.stage_name = singers.name
+    order by release_year desc;
