@@ -58,15 +58,19 @@ INSERT INTO Singers (name,song,release_year,genre) VALUES ("Yolanda Adams","That
 INSERT INTO Singers (name,song,release_year,genre) VALUES ("Tony Braxton","Unbreak My Heart","1996","R&B/Soul");
 INSERT INTO Singers (name,song,release_year,genre) VALUES ("Taylor Swift","Bad Blood","2014","Pop");
 
+
+1. Retrieve all singers, sorted by release year in descending order.
 SELECT *
 FROM singers
 order by release_year desc;
 
+2. Retrieve artists and singers data, joined on stage name.
 SELECT artists.id,artists.stage_name,artists.real_name,singers.id,singers.song,singers.	release_year,singers.genre FROM artists
-    JOIN singers
-    ON artists.stage_name = singers.name;
+JOIN singers
+ON artists.stage_name = singers.name;
     
+3. Retrieve artists and singers data, joined on stage name, sorted by release year in descending order.
 SELECT artists.id,artists.stage_name,artists.real_name,singers.song,singers.release_year,singers.genre FROM artists
-    JOIN singers
-    ON artists.stage_name = singers.name
-    order by release_year desc;
+JOIN singers
+ON artists.stage_name = singers.name
+order by release_year desc;
