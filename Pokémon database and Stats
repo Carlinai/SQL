@@ -813,19 +813,28 @@ INSERT INTO pokemon(Number,Name,Type_1,Type_2,Total,HP,Attack,Defense,Sp_Atk,Sp_
 INSERT INTO pokemon(Number,Name,Type_1,Type_2,Total,HP,Attack,Defense,Sp_Atk,Sp_Def,Speed,Generation,Legendary) VALUES (720,'HoopaHoopa Unbound','Psychic','Dark',680,80,160,60,170,130,80,6,'True');
 INSERT INTO pokemon(Number,Name,Type_1,Type_2,Total,HP,Attack,Defense,Sp_Atk,Sp_Def,Speed,Generation,Legendary) VALUES (721,'Volcanion','Fire','Water',600,80,110,120,130,90,70,6,'True');
 
+1. What are average, max, and min values in the data?
 SELECT Max(HP),Max(Speed), Max(Defense), Max(Attack), Name from pokemon;
 select Min(Hp), Min(Speed),Min(Defense), Min(Attack), name from pokemon;
 Select Avg(HP),Avg(Speed),Avg(Defense), Avg(Attack) from pokemon;
 
+2. Which Pokemon has 80 or fewer hp, but have over 100 attacks? 
 select name, attack from pokemon
 where hp > 80
 group by attack
 having attack < 100;
-SELECT * FROM pokemon WHERE Defense > 50 AND Attack < 30;
 
-SELECT * FROM pokemon WHERE HP > 70 OR Defense > 100;
+3. Select all Pokemon with Defense less than 50 and Attack over 30.
+SELECT * FROM pokemon 
+WHERE Defense > 50 
+AND Attack < 30;
 
+4. Select all Pokemon with HP less than 70 or Defense less than 100.
+SELECT * FROM pokemon 
+WHERE HP > 70 
+OR Defense > 100;
 
+5. Categorizing Pokemon Health Points (HP) into Zones in SQL
 SELECT Name hp,
     CASE 
         WHEN hp > 255-69 THEN "above max"
